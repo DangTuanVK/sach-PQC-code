@@ -4,7 +4,7 @@ Mã nguồn đi kèm sách **Mật mã hậu lượng tử -- Từ nền tảng 
 NIST, triển khai phần cứng và lộ trình chuyển đổi lượng tử** (TS. Đặng Minh
 Tuấn). Kho gồm hai loại tệp:
 
-- **46 khối mã in trong sách** (40 Python, 3 C, 2 SystemVerilog, 1 bash), mỗi
+- **46 khối mã in trong 19 chương của sách** (40 Python, 3 C, 2 SystemVerilog, 1 bash), mỗi
   tệp đánh số đúng như "Mã nguồn X.Y" trong sách và giống hệt nội dung in;
 - **chương trình chạy thử bổ sung** (`bo_sung_*.py`), không in trong sách, nạp
   đúng mã của sách, bổ sung phần sách lược bỏ và in ra đúng các dòng "kết quả
@@ -27,7 +27,7 @@ run_all.py                              chạy tất cả, lưu kết quả, so 
 Số mã nguồn trong sách đánh chung cho mọi ngôn ngữ. Khối mã không có số riêng
 vì là phần nối tiếp của mã nguồn ngay trước mang hậu tố `b`, `c`, ví dụ
 `ma_nguon_10_01b_...py`; khối không đánh số đứng trước mã nguồn đầu tiên của
-chương mang hậu tố `a`, ví dụ `ma_nguon_20_01a_...py`.
+chương mang hậu tố `a`, ví dụ `ma_nguon_19_01a_...py`.
 
 ## Chương trình bổ sung
 
@@ -44,13 +44,13 @@ Sách chỉ in phần cốt lõi của nhiều cài đặt; phần gọi thử v
 | `ch08/bo_sung_8_mldsa.py` | (module) ML-DSA đầy đủ theo FIPS 204, dùng `sign_internal` của sách |
 | `ch08/bo_sung_8_acvp.py` | Mã nguồn 8.1: đối chiếu vector ACVP keyGen, sigGen |
 | `ch10/bo_sung_10_wots_merkle.py` | Mã nguồn 10.1: WOTS+ và cây Merkle h = 4 |
-| `ch11/bo_sung_11_fors.py` | Mã nguồn 11.2: FORS với n = 16, a = 4, k = 8 |
-| `ch12/bo_sung_12_mceliece.py` | (module) Goppa, sinh khóa và mã hóa McEliece thu nhỏ |
-| `ch12/bo_sung_12_vong_doi.py` | Mã nguồn 12.1: vòng đời McEliece với ba bộ tham số |
-| `ch14/bo_sung_14_uov.py` | (module) F_16, sinh khóa và xác minh UOV thu nhỏ |
-| `ch14/bo_sung_14_ky.py` | Mã nguồn 14.1: ký UOV với bốn cấu hình |
-| `ch16/bo_sung_16_tb.sv`, `ch16/bo_sung_16_mo_phong.py` | Mã nguồn 16.1: testbench 2 000 bộ ba ngẫu nhiên, mô phỏng bằng VCS hoặc Questa |
-| `ch18/bo_sung_18_tls.py` | Mã nguồn 18.1: chạy tự động các lệnh OpenSSL |
+| `ch10/bo_sung_10_fors.py` | Mã nguồn 10.3: FORS với n = 16, a = 4, k = 8 |
+| `ch11/bo_sung_11_mceliece.py` | (module) Goppa, sinh khóa và mã hóa McEliece thu nhỏ |
+| `ch11/bo_sung_11_vong_doi.py` | Mã nguồn 11.1: vòng đời McEliece với ba bộ tham số |
+| `ch13/bo_sung_13_uov.py` | (module) F_16, sinh khóa và xác minh UOV thu nhỏ |
+| `ch13/bo_sung_13_ky.py` | Mã nguồn 13.1: ký UOV với bốn cấu hình |
+| `ch15/bo_sung_15_tb.sv`, `ch15/bo_sung_15_mo_phong.py` | Mã nguồn 15.1: testbench 2 000 bộ ba ngẫu nhiên, mô phỏng bằng VCS hoặc Questa |
+| `ch17/bo_sung_17_tls.py` | Mã nguồn 17.1: chạy tự động các lệnh OpenSSL |
 
 Khi một hàm của sách gọi hàm phụ trợ không in trong sách, tệp bổ sung định
 nghĩa hàm đó và gán vào module của sách; tệp `ma_nguon_*` không bị sửa. Các
@@ -59,14 +59,14 @@ chương trình có dùng số ngẫu nhiên đặt hạt giống cố định 2
 ## Phụ thuộc giữa các mã nguồn
 
 Một số mã nguồn dùng lại định nghĩa của khối trước, ví dụ phép nhân bản mã BFV
-(Mã nguồn 20.1b) dùng hàm `modpm` của khối 20.1a. Để mỗi tệp chạy độc lập
+(Mã nguồn 19.1b) dùng hàm `modpm` của khối 19.1a. Để mỗi tệp chạy độc lập
 được, đầu tệp có thêm một khối được đánh dấu rõ:
 
 ```python
-# --- Dòng thêm, không có trong sách: dùng lại định nghĩa từ Mã nguồn 20.1a ---
+# --- Dòng thêm, không có trong sách: dùng lại định nghĩa từ Mã nguồn 19.1a ---
 import contextlib as _ctx, io as _io
 with _ctx.redirect_stdout(_io.StringIO()):
-    from ma_nguon_20_01a_doan_ma_mo_dau import *  # noqa
+    from ma_nguon_19_01a_doan_ma_mo_dau import *  # noqa
 # --- Hết phần thêm ---
 ```
 
@@ -77,8 +77,8 @@ lại của tệp giống hệt sách. Danh sách phụ thuộc nằm trong `dep
 
 Mã in trong sách chạy được với Python 3.6 trở lên; kho được kiểm thử với Python
 3.11. Hầu hết tệp chỉ cần thư viện chuẩn; Mã nguồn 7.1 cần `numpy`, Mã nguồn
-1.1 cần `cryptography`, `bo_sung_18_tls.py` cần OpenSSL 3.5 trở lên,
-`bo_sung_16_mo_phong.py` cần trình mô phỏng SystemVerilog Synopsys VCS hoặc Siemens
+1.1 cần `cryptography`, `bo_sung_17_tls.py` cần OpenSSL 3.5 trở lên,
+`bo_sung_15_mo_phong.py` cần trình mô phỏng SystemVerilog Synopsys VCS hoặc Siemens
 Questa.
 
 ```bash
@@ -101,13 +101,13 @@ python bo_sung_8_acvp.py
 
 Chạy vài tệp qua `run_all.py`: `python run_all.py 2_02 bo_sung_8_acvp`.
 
-Mã nguồn 19.1c là công cụ dòng lệnh kiểm kê chứng thư; `run_all.py` gọi nó với
+Mã nguồn 18.1c là công cụ dòng lệnh kiểm kê chứng thư; `run_all.py` gọi nó với
 kho chứng thư gốc của hệ thống `/etc/pki/tls/certs/ca-bundle.crt` (Linux họ Red
 Hat). Trên hệ thống khác, truyền đường dẫn tới một tệp PEM bất kỳ.
 
-Mã C (Chương 6, 15) không được chạy tự động: đó là các hàm và đoạn minh họa rời,
-cần ghép vào chương trình riêng. Mã SystemVerilog (Chương 16) được mô phỏng qua
-`bo_sung_16_mo_phong.py`.
+Mã C (Chương 6, 14) không được chạy tự động: đó là các hàm và đoạn minh họa rời,
+cần ghép vào chương trình riêng. Mã SystemVerilog (Chương 15) được mô phỏng qua
+`bo_sung_15_mo_phong.py`.
 
 ## Kết quả kiểm tra
 
@@ -115,12 +115,12 @@ Với Python 3.11, numpy 2.4, cryptography 50, OpenSSL 3.6 và VCS U-2023.03,
 toàn bộ 51 tệp Python (40 khối của sách và 11 chương trình bổ sung) chạy không
 lỗi. 15 trong 16 khối "kết quả chạy" in trong sách được tái tạo và trùng từng
 dòng; chi tiết trong [ket_qua/BAO_CAO.md](ket_qua/BAO_CAO.md). Khối còn lại là
-danh sách nhóm của `openssl list -tls-groups` ở Chương 18, sách in dạng rút gọn
+danh sách nhóm của `openssl list -tls-groups` ở Chương 17, sách in dạng rút gọn
 nên không so tự động.
 
 Khi so với sách, `run_all.py` bỏ qua những phần phụ thuộc máy chạy: cột thời
-gian đo (Chương 6, 12, 14), ngày chạy (Mã nguồn 19.1c) và khoảng trắng trình mô
-phỏng chèn trước thời điểm `$finish` (Chương 16). Các biểu thức bỏ qua
+gian đo (Chương 6, 11, 13), ngày chạy (Mã nguồn 18.1c) và khoảng trắng trình mô
+phỏng chèn trước thời điểm `$finish` (Chương 15). Các biểu thức bỏ qua
 khai báo trong `bo_sung.json`.
 
 ## Cập nhật khi sách thay đổi

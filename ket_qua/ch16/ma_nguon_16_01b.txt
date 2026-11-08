@@ -1,0 +1,3 @@
+# Mã nguồn 16.1b: ch16/ma_nguon_16_01b_mo_phong_tan_cong_cpa_tiep.py
+# Lệnh: python ma_nguon_16_01b_mo_phong_tan_cong_cpa_tiep.py   (mã thoát: 0, 0.0 s)
+

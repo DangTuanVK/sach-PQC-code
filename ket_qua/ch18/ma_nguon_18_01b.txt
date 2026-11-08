@@ -1,0 +1,3 @@
+# Mã nguồn 18.1b: ch18/ma_nguon_18_01b_phan_loi_cua_cong_cu_tiep.py
+# Lệnh: python ma_nguon_18_01b_phan_loi_cua_cong_cu_tiep.py   (mã thoát: 0, 0.0 s)
+

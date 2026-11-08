@@ -1,3 +1,0 @@
-# Mã nguồn 12.1c: ch12/ma_nguon_12_01c_giai_ma_patterson_day_du_tiep.py
-# Lệnh: python ma_nguon_12_01c_giai_ma_patterson_day_du_tiep.py   (mã thoát: 0, 0.0 s)
-

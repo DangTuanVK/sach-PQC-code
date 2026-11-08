@@ -1,6 +1,0 @@
-# Mã nguồn bổ sung 16.1: ch16/bo_sung_16_mo_phong.py
-# Lệnh: python bo_sung_16_mo_phong.py   (mã thoát: 0, 1.1 s)
-
-KET QUA: 2000/2000 truong hop khop mo hinh tham chieu
-BUTTERFLY OK
-$finish at simulation time                20085

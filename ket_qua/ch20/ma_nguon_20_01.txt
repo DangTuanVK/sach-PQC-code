@@ -1,3 +1,0 @@
-# Mã nguồn 20.1: ch20/ma_nguon_20_01_bfv_thu_nho_sinh_khoa.py
-# Lệnh: python ma_nguon_20_01_bfv_thu_nho_sinh_khoa.py   (mã thoát: 0, 0.0 s)
-

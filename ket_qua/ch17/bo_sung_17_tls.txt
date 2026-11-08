@@ -1,0 +1,5 @@
+# Mã nguồn bổ sung 17.1: ch17/bo_sung_17_tls.py
+# Lệnh: python bo_sung_17_tls.py   (mã thoát: 0, 0.2 s)
+
+Negotiated TLS1.3 group: X25519MLKEM768
+SSL handshake has read 10203 bytes and written 1473 bytes

@@ -1,6 +1,6 @@
 # Mã nguồn 10.1 - WOTS+ theo RFC 8391. Hàm xác minh không cần khóa bí mật: nó băm tiếp mỗi mảnh chữ ký cho đủ w-1 bước, sau đó so với khóa công khai.
-# Sách: Mật mã hậu lượng tử (TS. Đặng Minh Tuấn), Chương 10, trang 239
-# Trích tự động từ chapters/ch10/main.tex (dòng 1067) bằng extract.py; không sửa tay file này.
+# Sách: Mật mã hậu lượng tử (TS. Đặng Minh Tuấn), Chương 10, trang 255
+# Trích tự động từ chapters/ch10/main.tex (dòng 2076) bằng extract.py; không sửa tay file này.
 
 def wots_params(w):                       # RFC 8391 muc 3.1.1
     len1 = ceil(8*n / log2(w))

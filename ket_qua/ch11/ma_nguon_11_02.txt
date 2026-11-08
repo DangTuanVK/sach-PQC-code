@@ -1,3 +1,0 @@
-# Mã nguồn 11.2: ch11/ma_nguon_11_02_fors_ky_va_khoi_phuc.py
-# Lệnh: python ma_nguon_11_02_fors_ky_va_khoi_phuc.py   (mã thoát: 0, 0.0 s)
-

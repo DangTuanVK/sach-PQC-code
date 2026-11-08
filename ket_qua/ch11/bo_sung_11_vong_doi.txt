@@ -1,0 +1,7 @@
+# Mã nguồn bổ sung 11.1: ch11/bo_sung_11_vong_doi.py
+# Lệnh: python bo_sung_11_vong_doi.py   (mã thoát: 0, 0.1 s)
+
+  m   t    n    k  |pk| (B)  giai ma dung  thoi gian
+  6   3   64   46       103        30/30       0.0s
+  6   5   64   34       127        30/30       0.0s
+  6   8   64   16        96        30/30       0.1s

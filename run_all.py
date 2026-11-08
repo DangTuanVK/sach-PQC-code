@@ -20,7 +20,7 @@ HERE = Path(__file__).resolve().parent
 OUT = HERE / "ket_qua"
 TIMEOUT = 900  # giây cho mỗi mã nguồn
 # Tham số dòng lệnh cho các mã nguồn là công cụ dòng lệnh
-ARGS = {"19_01c": ["/etc/pki/tls/certs/ca-bundle.crt"]}
+ARGS = {"18_01c": ["/etc/pki/tls/certs/ca-bundle.crt"]}
 # Thư mục chạy riêng (mặc định: thư mục chương), vd. để mở tệp vector kiểm thử
 CWD = {"7_02c": "du_lieu/acvp"}
 

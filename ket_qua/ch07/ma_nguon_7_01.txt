@@ -1,5 +1,5 @@
 # Mã nguồn 7.1: ch07/ma_nguon_7_01_tinh_can_eq_ch7_chan.py
-# Lệnh: python ma_nguon_7_01_tinh_can_eq_ch7_chan.py   (mã thoát: 0, 54.3 s)
+# Lệnh: python ma_nguon_7_01_tinh_can_eq_ch7_chan.py   (mã thoát: 0, 54.7 s)
 
 ML-KEM-512: delta <= 2^-138.77
 ML-KEM-768: delta <= 2^-164.81

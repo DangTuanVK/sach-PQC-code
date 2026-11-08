@@ -1,7 +1,7 @@
 [
  {
-  "cho_ma_nguon": "19_01c",
-  "chapter": 19,
+  "cho_ma_nguon": "18_01c",
+  "chapter": 18,
   "sau": "Chạy công cụ trên kho chứng thư gốc mặc định của một máy chủ Linux đang vận hành",
   "bo_qua": [
    "tinh tai \\d{4}-\\d{2}-\\d{2}"
@@ -39,35 +39,35 @@
   "ma_nguon": "10.1"
  },
  {
-  "file": "ch11/bo_sung_11_fors.py",
-  "chapter": 11,
+  "file": "ch10/bo_sung_10_fors.py",
+  "chapter": 10,
   "sau": "Chạy riêng phần FORS với $n = 16$, $a = 4$, $k = 8$",
   "mo_ta": "Khung lớp FORS tối thiểu và chạy thử với n = 16, a = 4, k = 8",
-  "ma_nguon": "11.2"
+  "ma_nguon": "10.3"
  },
  {
-  "file": "ch18/bo_sung_18_tls.py",
-  "chapter": 18,
+  "file": "ch17/bo_sung_17_tls.py",
+  "chapter": 17,
   "sau": "Kết quả in ra xác nhận nhóm đã thương lượng và tổng số byte:",
-  "mo_ta": "Chạy tự động các lệnh OpenSSL của Mã nguồn 18.1 (cần OpenSSL 3.5 trở lên)",
-  "ma_nguon": "18.1"
+  "mo_ta": "Chạy tự động các lệnh OpenSSL của Mã nguồn 17.1 (cần OpenSSL 3.5 trở lên)",
+  "ma_nguon": "17.1"
  },
  {
-  "file": "ch12/bo_sung_12_vong_doi.py",
-  "chapter": 12,
+  "file": "ch11/bo_sung_11_vong_doi.py",
+  "chapter": 11,
   "sau": "Chạy đầy đủ vòng đời (sinh khóa, mã hóa, giải mã) với ba bộ tham số thu nhỏ",
   "mo_ta": "Vòng đời McEliece thu nhỏ (sinh khóa Goppa, mã hóa, giải mã Patterson) với ba bộ tham số",
-  "ma_nguon": "12.1",
+  "ma_nguon": "11.1",
   "bo_qua": [
    "\\d+\\.\\d+s$"
   ]
  },
  {
-  "file": "ch14/bo_sung_14_ky.py",
-  "chapter": 14,
+  "file": "ch13/bo_sung_13_ky.py",
+  "chapter": 13,
   "sau": "Chạy với bốn cấu hình trên $\\mathbb{F}_{16}$ cho kết quả sau:",
   "mo_ta": "Ký và xác minh UOV thu nhỏ với bốn cấu hình trên F_16",
-  "ma_nguon": "14.1",
+  "ma_nguon": "13.1",
   "bo_qua": [
    "\\d+\\.\\d+s$"
   ]
@@ -87,11 +87,11 @@
   "ma_nguon": "7.2"
  },
  {
-  "file": "ch16/bo_sung_16_mo_phong.py",
-  "chapter": 16,
+  "file": "ch15/bo_sung_15_mo_phong.py",
+  "chapter": 15,
   "sau": "(testbench đầy đủ có trong kho mã của sách",
   "mo_ta": "Testbench và mô phỏng khối cánh bướm SystemVerilog (cần VCS hoặc Questa)",
-  "ma_nguon": "16.1",
+  "ma_nguon": "15.1",
   "bo_qua": [
    "simulation time\\s+"
   ]

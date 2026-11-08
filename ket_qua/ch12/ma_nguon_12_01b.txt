@@ -1,3 +1,3 @@
-# Mã nguồn 12.1b: ch12/ma_nguon_12_01b_giai_ma_patterson_day_du_tiep.py
-# Lệnh: python ma_nguon_12_01b_giai_ma_patterson_day_du_tiep.py   (mã thoát: 0, 0.0 s)
+# Mã nguồn 12.1b: ch12/ma_nguon_12_01b_ma_reed_muller_bac_mot_tiep.py
+# Lệnh: python ma_nguon_12_01b_ma_reed_muller_bac_mot_tiep.py   (mã thoát: 0, 0.0 s)
 

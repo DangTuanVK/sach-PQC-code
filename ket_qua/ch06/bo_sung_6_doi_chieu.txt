@@ -1,11 +1,11 @@
 # Mã nguồn bổ sung 6.3: ch06/bo_sung_6_doi_chieu.py
-# Lệnh: python bo_sung_6_doi_chieu.py   (mã thoát: 0, 3.1 s)
+# Lệnh: python bo_sung_6_doi_chieu.py   (mã thoát: 0, 3.2 s)
 
 [ML-KEM] doi chieu NTT vs nhan truc tiep: 200/200 trung khop
 [ML-KEM] INTT(NTT(f)) == f : True
-[ML-KEM] 50 phep nhan: truc tiep 0.257s | qua NTT 0.025s | nhanh gap 10.1 lan
+[ML-KEM] 50 phep nhan: truc tiep 0.266s | qua NTT 0.026s | nhanh gap 10.1 lan
 [ML-DSA] doi chieu NTT vs nhan truc tiep: 200/200 trung khop
 [ML-DSA] INTT(NTT(f)) == f : True
-[ML-DSA] 50 phep nhan: truc tiep 0.300s | qua NTT 0.025s | nhanh gap 11.9 lan
+[ML-DSA] 50 phep nhan: truc tiep 0.306s | qua NTT 0.026s | nhanh gap 11.9 lan
 [ML-DSA] w_hat[i] == w(zeta^(2*BitRev8(i)+1)) voi moi i: True
 [ML-KEM] q mod 512 = 257, co can bac 512: False

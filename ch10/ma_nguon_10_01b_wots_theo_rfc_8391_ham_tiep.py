@@ -1,6 +1,6 @@
 # Mã nguồn 10.1b - (khối mã không đánh số, sau Mã nguồn 10.1)
-# Sách: Mật mã hậu lượng tử (TS. Đặng Minh Tuấn), Chương 10, trang 239
-# Trích tự động từ chapters/ch10/main.tex (dòng 1103) bằng extract.py; không sửa tay file này.
+# Sách: Mật mã hậu lượng tử (TS. Đặng Minh Tuấn), Chương 10, trang 255
+# Trích tự động từ chapters/ch10/main.tex (dòng 2112) bằng extract.py; không sửa tay file này.
 
 def merkle_build(la):
     tang = [list(la)]
