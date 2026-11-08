@@ -1,0 +1,11 @@
+# Mã nguồn bổ sung 10.1: ch10/bo_sung_10_wots_merkle.py
+# Lệnh: python bo_sung_10_wots_merkle.py   (mã thoát: 0, 0.0 s)
+
+=== WOTS+ ky va xac minh (w=16) ===
+  chu ky hop le      : True
+  thong diep khac    : False
+  kich thuoc chu ky  : 2144 byte
+
+=== Cay Merkle ===
+  chieu cao h = 4, so khoa mot lan = 16
+  duong xac thuc dung cho 16/16 chi so, moi duong dai 4 nut = 128 byte

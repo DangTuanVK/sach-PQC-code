@@ -1,0 +1,8 @@
+# Mã nguồn bổ sung 14.1: ch14/bo_sung_14_ky.py
+# Lệnh: python bo_sung_14_ky.py   (mã thoát: 0, 0.1 s)
+
+   n   m   v  |pk| (he so)   ky dung  thoi gian
+   8   4   4           144     20/20       0.0s
+  12   6   6           468     20/20       0.0s
+  16   8   8          1088     20/20       0.0s
+  20  10  10          2100     20/20       0.0s

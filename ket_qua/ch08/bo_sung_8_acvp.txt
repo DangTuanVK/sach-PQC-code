@@ -1,0 +1,14 @@
+# Mã nguồn bổ sung 8.1: ch08/bo_sung_8_acvp.py
+# Lệnh: python bo_sung_8_acvp.py   (mã thoát: 0, 6.9 s)
+
+[KAT] keyGen day du: 75/75
+
+[KAT] sigGen (thuan, tat dinh, giao dien ngoai):
+   ML-DSA-44: 15/15
+   ML-DSA-65: 15/15
+   ML-DSA-87: 15/15
+
+[KAT] sigGen (thuan, co rao, rnd cho san trong vector):
+   ML-DSA-44: 15/15
+   ML-DSA-65: 15/15
+   ML-DSA-87: 15/15

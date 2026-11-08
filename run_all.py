@@ -9,6 +9,7 @@ Kết quả: ket_qua/chXX/ma_nguon_X_YY.txt (stdout + stderr) và ket_qua/BAO_CA
 """
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -20,15 +21,22 @@ OUT = HERE / "ket_qua"
 TIMEOUT = 900  # giây cho mỗi mã nguồn
 # Tham số dòng lệnh cho các mã nguồn là công cụ dòng lệnh
 ARGS = {"19_01c": ["/etc/pki/tls/certs/ca-bundle.crt"]}
+# Thư mục chạy riêng (mặc định: thư mục chương), vd. để mở tệp vector kiểm thử
+CWD = {"7_02c": "du_lieu/acvp"}
 
 
-def normalize(text):
-    return [line.rstrip() for line in text.strip("\n").split("\n")]
+def normalize(text, mask=()):
+    """Bỏ khoảng trắng cuối dòng; thay các phần phụ thuộc máy (thời gian đo...)
+    khớp biểu thức trong `mask` bằng <...> trước khi so."""
+    lines = [line.rstrip() for line in text.strip("\n").split("\n")]
+    for pat in mask:
+        lines = [re.sub(pat, "<...>", line) for line in lines]
+    return lines
 
 
-def compare(actual, expected):
+def compare(actual, expected, mask=()):
     """Trả về danh sách dòng lệch (số dòng, sách, thực tế)."""
-    a, e = normalize(actual), normalize(expected)
+    a, e = normalize(actual, mask), normalize(expected, mask)
     diffs = []
     for i in range(max(len(a), len(e))):
         la = a[i] if i < len(a) else "<không có>"
@@ -48,8 +56,9 @@ def run_one(b):
     before = set(path.parent.iterdir())
     t0 = time.time()
     try:
-        p = subprocess.run([sys.executable, path.name] + ARGS.get(b["id"], []),
-                           cwd=path.parent, env=env,
+        cwd = HERE / CWD[b["id"]] if b["id"] in CWD else path.parent
+        p = subprocess.run([sys.executable, str(path)] + ARGS.get(b["id"], []),
+                           cwd=cwd, env=env,
                            capture_output=True, text=True, timeout=TIMEOUT)
         rc, stdout, stderr = p.returncode, p.stdout, p.stderr
     except subprocess.TimeoutExpired as ex:
@@ -60,7 +69,8 @@ def run_one(b):
     stdout = stdout.replace(str(HERE) + os.sep, "")
     stderr = stderr.replace(str(HERE) + os.sep, "")
     STDOUT[b["id"]] = stdout
-    res = OUT / f"ch{b['chapter']:02d}" / f"ma_nguon_{b['id']}.txt"
+    res = OUT / f"ch{b['chapter']:02d}" / (f"{b['id']}.txt" if b.get("bo_sung")
+                                            else f"ma_nguon_{b['id']}.txt")
     res.parent.mkdir(parents=True, exist_ok=True)
     body = (f"# Mã nguồn {b['number']}: {b['file']}\n"
             f"# Lệnh: python {path.name}   (mã thoát: {rc}, {dt:.1f} s)\n\n{stdout}")
@@ -70,7 +80,7 @@ def run_one(b):
     created = [f for f in path.parent.iterdir()
                if f not in before and f.name != "__pycache__"]
     if created:
-        dest = res.parent / f"ma_nguon_{b['id']}_tep"
+        dest = res.parent / (res.stem + "_tep")
         if dest.exists():
             shutil.rmtree(dest)
         dest.mkdir(parents=True)
@@ -92,7 +102,7 @@ def run_one(b):
         # không in trong sách
         diffs, status = None, "CHỈ ĐỊNH NGHĨA"
     elif b.get("expected"):
-        diffs = compare(stdout, b["expected"])
+        diffs = compare(stdout, b["expected"], b.get("mask", []))
         base = b["id"].rstrip("bcdefg")
         if diffs and base != b["id"] and base in STDOUT:
             # Sách in chung kết quả của mã nguồn gốc và phần nối tiếp

@@ -17,6 +17,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 BOOK = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else HERE.parent / "sach-PQC"
 DEPS_FILE = HERE / "deps.json"   # khai báo phụ thuộc giữa các mã nguồn
+BS_FILE = HERE / "bo_sung.json"  # chương trình chạy thử bổ sung, không in trong sách
 EXT = {"python": "py", "c": "c", "systemverilog": "sv", "bash": "sh"}
 COMMENT = {"python": "#", "bash": "#", "c": "//", "systemverilog": "//"}
 TITLE = "Mật mã hậu lượng tử (TS. Đặng Minh Tuấn)"
@@ -169,15 +170,56 @@ def header_lines(b, page, deps, by_id):
          f"{c} Trích tự động từ {b['tex']} (dòng {b['line']}) bằng extract.py; "
          f"không sửa tay file này."]
     if deps:
+        def ten(d):
+            return d + " (tệp bổ sung, không in trong sách)" if d.startswith("bo_sung_") \
+                else "Mã nguồn " + by_id[d]["number"]
+
+        def mod(d):
+            return d if d.startswith("bo_sung_") else Path(by_id[d]["file"]).stem
         h.append("")
         h.append("# --- Dòng thêm, không có trong sách: dùng lại định nghĩa từ "
-                 + ", ".join("Mã nguồn " + by_id[d]["number"] for d in deps) + " ---")
+                 + ", ".join(ten(d) for d in deps) + " ---")
         h.append("import contextlib as _ctx, io as _io")
         h.append("with _ctx.redirect_stdout(_io.StringIO()):")
         for d in deps:
-            h.append(f"    from {Path(by_id[d]['file']).stem} import *  # noqa")
+            h.append(f"    from {mod(d)} import *  # noqa")
         h.append("# --- Hết phần thêm ---")
     return h
+
+
+def text_blocks(path):
+    """Các khối text của một chương, kèm đoạn văn bản đứng ngay trước."""
+    tex = strip_comments(path.read_text(encoding="utf-8"))
+    out = []
+    for m in NEXT_MINTED.finditer(tex):
+        if m.group(1) == "text":
+            before = " ".join(tex[max(0, m.start() - 600):m.start()].split())
+            out.append((before, m.group(2)))
+    return out
+
+
+def supplements():
+    """Chương trình chạy thử bổ sung (bo_sung.json): mỗi mục chỉ ra khối kết quả
+    in trong sách mà nó phải tái tạo, bằng một đoạn văn bản đứng ngay trước khối đó."""
+    if not BS_FILE.exists():
+        return []
+    chapters = dict(chapter_files())
+    pages = page_numbers()
+    out = []
+    for e in json.loads(BS_FILE.read_text(encoding="utf-8")):
+        found = [txt for before, txt in text_blocks(chapters[e["chapter"]]) if e["sau"] in before]
+        if len(found) != 1:
+            sys.exit(f"bo_sung.json: '{e['sau']}' khớp {len(found)} khối kết quả ở Chương {e['chapter']}")
+        if "cho_ma_nguon" in e:
+            # Gắn kết quả in trong sách cho chính một khối mã của sách
+            out.append(dict(gan=e["cho_ma_nguon"], expected=found[0], mask=e.get("bo_qua", [])))
+            continue
+        stem = Path(e["file"]).stem
+        out.append(dict(id=stem, number=f"bổ sung {e.get('ma_nguon', e['chapter'])}", chapter=e["chapter"], lang="python",
+                        caption=e["mo_ta"], title=e["mo_ta"], tex=f"chapters/ch{e['chapter']}/main.tex",
+                        line=None, expected=found[0], file=e["file"], page=pages.get(e.get("ma_nguon")),
+                        deps=[], mask=e.get("bo_qua", []), bo_sung=True))
+    return out
 
 
 def main():
@@ -213,6 +255,18 @@ def main():
         text = "\n".join(header_lines(b, b["page"], b["deps"], by_id)) + "\n\n" + b["code"]
         out.write_text(text, encoding="utf-8")
     manifest = [{k: v for k, v in b.items() if k != "code"} for b in blocks]
+    for e in supplements():
+        if "gan" in e:
+            for m in manifest:
+                if m["id"] == e["gan"]:
+                    m["expected"], m["mask"] = e["expected"], e["mask"]
+        else:
+            # Khối kết quả này do chương trình bổ sung tái tạo: không so nó với
+            # khối mã của sách đứng ngay trước (khối đó chỉ in một phần)
+            for m in manifest:
+                if m.get("expected") == e["expected"]:
+                    m["expected"] = None
+            manifest.append(e)
     (HERE / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1),
                                         encoding="utf-8")
     langs = {}

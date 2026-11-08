@@ -1,0 +1,6 @@
+# Mã nguồn bổ sung 11.2: ch11/bo_sung_11_fors.py
+# Lệnh: python bo_sung_11_fors.py   (mã thoát: 0, 0.0 s)
+
+  chu ky FORS hop le  : True
+  thong diep khac     : False
+  kich thuoc phan FORS: 640 byte

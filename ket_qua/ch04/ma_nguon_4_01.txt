@@ -1,6 +1,15 @@
 # Mã nguồn 4.1: ch04/ma_nguon_4_01_tinh_kich_thuoc_khoa_va.py
 # Lệnh: python ma_nguon_4_01_tinh_kich_thuoc_khoa_va.py   (mã thoát: 0, 0.0 s)
 
-OK  ML-KEM-512   (800, 1632, 768) vs (800, 1632, 768)
-OK  ML-KEM-768   (1184, 2400, 1088) vs (1184, 2400, 1088)
-OK  ML-KEM-1024  (1568, 3168, 1568) vs (1568, 3168, 1568)
+== ML-KEM (FIPS 203) ==
+  OK  ML-KEM-512    tinh=(800, 1632, 768)      cong_bo=(800, 1632, 768)
+  OK  ML-KEM-768    tinh=(1184, 2400, 1088)    cong_bo=(1184, 2400, 1088)
+  OK  ML-KEM-1024   tinh=(1568, 3168, 1568)    cong_bo=(1568, 3168, 1568)
+== HQC (dac ta 2025-08-22) ==
+  OK  HQC-1         tinh=(2241, 2321, 4433)    cong_bo=(2241, 2321, 4433)
+  OK  HQC-3         tinh=(4514, 4602, 8978)    cong_bo=(4514, 4602, 8978)
+  OK  HQC-5         tinh=(7237, 7333, 14421)   cong_bo=(7237, 7333, 14421)
+== Classic McEliece ==
+  mceliece348864    |pk| =   261 120 B (  255,0 KiB)   |ct| =  96 B
+  mceliece6960119   |pk| = 1 047 319 B (1 022,8 KiB)   |ct| = 194 B
+  mceliece8192128   |pk| = 1 357 824 B (1 326,0 KiB)   |ct| = 208 B

@@ -1,0 +1,12 @@
+# Mã nguồn bổ sung 7.2: ch07/bo_sung_7_acvp.py
+# Lệnh: python bo_sung_7_acvp.py   (mã thoát: 0, 1.0 s)
+
+[KAT] keyGen day du: 75/75
+
+decapsulation   ML-KEM-512   10/10       encapsulation   ML-KEM-512   25/25
+decapsulation   ML-KEM-768   10/10       encapsulation   ML-KEM-768   25/25
+decapsulation   ML-KEM-1024  10/10       encapsulation   ML-KEM-1024  25/25
+
+phan tich decaps theo ly do:
+  modified ciphertext              15/15
+  valid decapsulation              15/15

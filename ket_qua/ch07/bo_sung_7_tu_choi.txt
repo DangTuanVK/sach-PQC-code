@@ -1,0 +1,6 @@
+# Mã nguồn bổ sung 7.2: ch07/bo_sung_7_tu_choi.py
+# Lệnh: python bo_sung_7_tu_choi.py   (mã thoát: 0, 0.1 s)
+
+[lay mau tu choi] 46080 he so lay tu 56764 ung vien
+                  -> ti le tu choi 18.82%
+  ly thuyet: 1 - q/2^12 = 18.73%
