@@ -85,5 +85,15 @@
   "sau": "Đếm số ứng viên bị loại trong $20$ lần sinh khóa ML-KEM-768",
   "mo_ta": "Đếm ứng viên bị loại của SampleNTT trong 20 lần sinh khóa ML-KEM-768",
   "ma_nguon": "7.2"
+ },
+ {
+  "file": "ch16/bo_sung_16_mo_phong.py",
+  "chapter": 16,
+  "sau": "(testbench đầy đủ có trong kho mã của sách",
+  "mo_ta": "Testbench và mô phỏng khối cánh bướm SystemVerilog (cần VCS hoặc Questa)",
+  "ma_nguon": "16.1",
+  "bo_qua": [
+   "simulation time\\s+"
+  ]
  }
 ]

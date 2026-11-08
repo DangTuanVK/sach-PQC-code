@@ -1,6 +1,6 @@
 # Báo cáo chạy mã nguồn của sách "Mật mã hậu lượng tử"
 
-Python 3.11.18; 56 khối mã: CHẠY ĐƯỢC 36, KHÔNG CHẠY 6, KHỚP SÁCH 14.
+Python 3.11.18; 57 khối mã: CHẠY ĐƯỢC 36, KHÔNG CHẠY 6, KHỚP SÁCH 15.
 
 Trạng thái: **KHỚP SÁCH** (chạy được và kết quả trùng với "Kết quả chạy" in trong sách), **CHẠY ĐƯỢC** (sách không in kết quả), **TRÍCH ĐOẠN** (khối mã trích từ một cài đặt lớn hơn, gọi hàm phụ trợ không in trong sách nên không chạy độc lập), **CHỈ ĐỊNH NGHĨA** (khối chỉ định nghĩa hàm, chạy không lỗi nhưng không in gì; "Kết quả chạy" in trong sách đến từ phần gọi thử không in trong sách), **KHÔNG CHẠY** (mã C, SystemVerilog, bash: không chạy tự động), **LỆCH SÁCH**, **LỖI**, **TIMEOUT**.
 
@@ -21,7 +21,7 @@ Trạng thái: **KHỚP SÁCH** (chạy được và kết quả trùng với "K
 | 6.1 | 119 | NTT và INTT chung cho ML-KEM và ML-DSA. Cùng một hàm: khi gọi với KEM, hàm trùng Thuật toán 9, 10 của FIPS 203; khi gọi với DSA, hàm trùng Thuật toán 41, 42 của FIPS 204. | CHẠY ĐƯỢC | 0.0 s | [ma_nguon_6_01.txt](ch06/ma_nguon_6_01.txt) |
 | 6.2 | 118 | Phép nhân trong miền NTT của hai chuẩn: 128 phép nhân cơ sở cho ML-KEM, 256 phép nhân từng phần tử cho ML-DSA. | CHẠY ĐƯỢC | 0.0 s | [ma_nguon_6_02.txt](ch06/ma_nguon_6_02.txt) |
 | 6.3 | 120 | Phép nhân trực tiếp trong Z_q[X]/(X^256+1), dùng làm chuẩn đối chiếu cho NTT. | CHẠY ĐƯỢC | 0.0 s | [ma_nguon_6_03.txt](ch06/ma_nguon_6_03.txt) |
-| 7.1 | 147 | Tính cận 7.13 cho tỉ lệ giải mã sai của ba bộ tham số. Chương trình cần NumPy và chạy khoảng một phút. | CHẠY ĐƯỢC | 54.7 s | [ma_nguon_7_01.txt](ch07/ma_nguon_7_01.txt) |
+| 7.1 | 147 | Tính cận 7.13 cho tỉ lệ giải mã sai của ba bộ tham số. Chương trình cần NumPy và chạy khoảng một phút. | CHẠY ĐƯỢC | 54.3 s | [ma_nguon_7_01.txt](ch07/ma_nguon_7_01.txt) |
 | 7.2 | 149 | Hai hàm của lớp ngoài ML-KEM. Cấu trúc bám đúng Thuật toán 17 và 18 của FIPS 203, kể cả thứ tự tính barK trước phép so sánh. | CHẠY ĐƯỢC | 0.0 s | [ma_nguon_7_02.txt](ch07/ma_nguon_7_02.txt) |
 | 7.2b | 149 | (khối mã không đánh số, sau Mã nguồn 7.2) | CHẠY ĐƯỢC | 0.0 s | [ma_nguon_7_02b.txt](ch07/ma_nguon_7_02b.txt) |
 | 7.2c | 149 | (khối mã không đánh số, sau Mã nguồn 7.2) | CHẠY ĐƯỢC | 0.4 s | [ma_nguon_7_02c.txt](ch07/ma_nguon_7_02c.txt) |
@@ -62,3 +62,4 @@ Trạng thái: **KHỚP SÁCH** (chạy được và kết quả trùng với "K
 | bổ sung 14.1 | 305 | Ký và xác minh UOV thu nhỏ với bốn cấu hình trên F_16 | KHỚP SÁCH | 0.1 s | [bo_sung_14_ky.txt](ch14/bo_sung_14_ky.txt) |
 | bổ sung 7.2 | 149 | ML-KEM đầy đủ, đối chiếu keyGen, encapsulation, decapsulation với vector ACVP của NIST | KHỚP SÁCH | 1.0 s | [bo_sung_7_acvp.txt](ch07/bo_sung_7_acvp.txt) |
 | bổ sung 7.2 | 149 | Đếm ứng viên bị loại của SampleNTT trong 20 lần sinh khóa ML-KEM-768 | KHỚP SÁCH | 0.1 s | [bo_sung_7_tu_choi.txt](ch07/bo_sung_7_tu_choi.txt) |
+| bổ sung 16.1 | 325 | Testbench và mô phỏng khối cánh bướm SystemVerilog (cần VCS hoặc Questa) | KHỚP SÁCH | 1.1 s | [bo_sung_16_mo_phong.txt](ch16/bo_sung_16_mo_phong.txt) |

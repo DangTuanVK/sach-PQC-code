@@ -3,9 +3,9 @@
 
 [ML-KEM] doi chieu NTT vs nhan truc tiep: 200/200 trung khop
 [ML-KEM] INTT(NTT(f)) == f : True
-[ML-KEM] 50 phep nhan: truc tiep 0.255s | qua NTT 0.026s | nhanh gap 10.0 lan
+[ML-KEM] 50 phep nhan: truc tiep 0.257s | qua NTT 0.025s | nhanh gap 10.1 lan
 [ML-DSA] doi chieu NTT vs nhan truc tiep: 200/200 trung khop
 [ML-DSA] INTT(NTT(f)) == f : True
-[ML-DSA] 50 phep nhan: truc tiep 0.299s | qua NTT 0.025s | nhanh gap 11.8 lan
+[ML-DSA] 50 phep nhan: truc tiep 0.300s | qua NTT 0.025s | nhanh gap 11.9 lan
 [ML-DSA] w_hat[i] == w(zeta^(2*BitRev8(i)+1)) voi moi i: True
 [ML-KEM] q mod 512 = 257, co can bac 512: False

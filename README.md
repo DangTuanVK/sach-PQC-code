@@ -49,6 +49,7 @@ Sách chỉ in phần cốt lõi của nhiều cài đặt; phần gọi thử v
 | `ch12/bo_sung_12_vong_doi.py` | Mã nguồn 12.1: vòng đời McEliece với ba bộ tham số |
 | `ch14/bo_sung_14_uov.py` | (module) F_16, sinh khóa và xác minh UOV thu nhỏ |
 | `ch14/bo_sung_14_ky.py` | Mã nguồn 14.1: ký UOV với bốn cấu hình |
+| `ch16/bo_sung_16_tb.sv`, `ch16/bo_sung_16_mo_phong.py` | Mã nguồn 16.1: testbench 2 000 bộ ba ngẫu nhiên, mô phỏng bằng VCS hoặc Questa |
 | `ch18/bo_sung_18_tls.py` | Mã nguồn 18.1: chạy tự động các lệnh OpenSSL |
 
 Khi một hàm của sách gọi hàm phụ trợ không in trong sách, tệp bổ sung định
@@ -76,7 +77,9 @@ lại của tệp giống hệt sách. Danh sách phụ thuộc nằm trong `dep
 
 Mã in trong sách chạy được với Python 3.6 trở lên; kho được kiểm thử với Python
 3.11. Hầu hết tệp chỉ cần thư viện chuẩn; Mã nguồn 7.1 cần `numpy`, Mã nguồn
-1.1 cần `cryptography`, `bo_sung_18_tls.py` cần OpenSSL 3.5 trở lên.
+1.1 cần `cryptography`, `bo_sung_18_tls.py` cần OpenSSL 3.5 trở lên,
+`bo_sung_16_mo_phong.py` cần trình mô phỏng SystemVerilog Synopsys VCS hoặc Siemens
+Questa.
 
 ```bash
 # Cách 1: conda / micromamba
@@ -102,22 +105,22 @@ Mã nguồn 19.1c là công cụ dòng lệnh kiểm kê chứng thư; `run_all.
 kho chứng thư gốc của hệ thống `/etc/pki/tls/certs/ca-bundle.crt` (Linux họ Red
 Hat). Trên hệ thống khác, truyền đường dẫn tới một tệp PEM bất kỳ.
 
-Mã C (Chương 6, 15) và SystemVerilog (Chương 16) không được chạy tự động: mã C
-là các hàm rời cần ghép vào chương trình riêng, mã SystemVerilog cần trình mô
-phỏng như Icarus Verilog, VCS hoặc Questa.
+Mã C (Chương 6, 15) không được chạy tự động: đó là các hàm và đoạn minh họa rời,
+cần ghép vào chương trình riêng. Mã SystemVerilog (Chương 16) được mô phỏng qua
+`bo_sung_16_mo_phong.py`.
 
 ## Kết quả kiểm tra
 
-Với Python 3.11, numpy 2.4, cryptography 50 và OpenSSL 3.6, toàn bộ 50 tệp
-Python (40 khối của sách và 10 chương trình bổ sung) chạy không lỗi. 14 trong 16
-khối "kết quả chạy" in trong sách được tái tạo và trùng từng dòng; chi tiết
-trong [ket_qua/BAO_CAO.md](ket_qua/BAO_CAO.md). Hai khối còn lại không so tự
-động: kết quả mô phỏng SystemVerilog ở Chương 16 (testbench không in trong sách)
-và danh sách nhóm của `openssl list -tls-groups` ở Chương 18 (sách in dạng rút
-gọn).
+Với Python 3.11, numpy 2.4, cryptography 50, OpenSSL 3.6 và VCS U-2023.03,
+toàn bộ 51 tệp Python (40 khối của sách và 11 chương trình bổ sung) chạy không
+lỗi. 15 trong 16 khối "kết quả chạy" in trong sách được tái tạo và trùng từng
+dòng; chi tiết trong [ket_qua/BAO_CAO.md](ket_qua/BAO_CAO.md). Khối còn lại là
+danh sách nhóm của `openssl list -tls-groups` ở Chương 18, sách in dạng rút gọn
+nên không so tự động.
 
 Khi so với sách, `run_all.py` bỏ qua những phần phụ thuộc máy chạy: cột thời
-gian đo (Chương 6, 12, 14) và ngày chạy (Mã nguồn 19.1c). Các biểu thức bỏ qua
+gian đo (Chương 6, 12, 14), ngày chạy (Mã nguồn 19.1c) và khoảng trắng trình mô
+phỏng chèn trước thời điểm `$finish` (Chương 16). Các biểu thức bỏ qua
 khai báo trong `bo_sung.json`.
 
 ## Cập nhật khi sách thay đổi

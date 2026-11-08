@@ -830,5 +830,23 @@
   "deps": [],
   "mask": [],
   "bo_sung": true
+ },
+ {
+  "id": "bo_sung_16_mo_phong",
+  "number": "bổ sung 16.1",
+  "chapter": 16,
+  "lang": "python",
+  "caption": "Testbench và mô phỏng khối cánh bướm SystemVerilog (cần VCS hoặc Questa)",
+  "title": "Testbench và mô phỏng khối cánh bướm SystemVerilog (cần VCS hoặc Questa)",
+  "tex": "chapters/ch16/main.tex",
+  "line": null,
+  "expected": "KET QUA: 2000/2000 truong hop khop mo hinh tham chieu\nBUTTERFLY OK\n$finish at simulation time  20085\n",
+  "file": "ch16/bo_sung_16_mo_phong.py",
+  "page": 325,
+  "deps": [],
+  "mask": [
+   "simulation time\\s+"
+  ],
+  "bo_sung": true
  }
 ]
