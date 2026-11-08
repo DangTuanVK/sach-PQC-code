@@ -1,0 +1,3 @@
+# Thư viện ngoài (phần lớn mã nguồn chỉ cần thư viện chuẩn của Python 3.10+)
+numpy>=1.24          # một số mã nguồn tính toán ma trận
+cryptography>=41     # đọc chứng thư X.509 (Chương 1, Chương 19)

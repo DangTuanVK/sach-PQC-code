@@ -1,0 +1,3 @@
+# Mã nguồn 9.2: ch09/ma_nguon_9_02_bo_lay_mau_cdt_thoat.py
+# Lệnh: python ma_nguon_9_02_bo_lay_mau_cdt_thoat.py   (mã thoát: 0, 0.0 s)
+

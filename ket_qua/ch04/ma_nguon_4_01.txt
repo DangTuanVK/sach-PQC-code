@@ -1,0 +1,6 @@
+# Mã nguồn 4.1: ch04/ma_nguon_4_01_tinh_kich_thuoc_khoa_va.py
+# Lệnh: python ma_nguon_4_01_tinh_kich_thuoc_khoa_va.py   (mã thoát: 0, 0.0 s)
+
+OK  ML-KEM-512   (800, 1632, 768) vs (800, 1632, 768)
+OK  ML-KEM-768   (1184, 2400, 1088) vs (1184, 2400, 1088)
+OK  ML-KEM-1024  (1568, 3168, 1568) vs (1568, 3168, 1568)

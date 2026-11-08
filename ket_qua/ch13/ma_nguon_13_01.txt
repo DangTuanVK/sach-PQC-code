@@ -1,0 +1,3 @@
+# Mã nguồn 13.1: ch13/ma_nguon_13_01_ma_reed_muller_bac_mot.py
+# Lệnh: python ma_nguon_13_01_ma_reed_muller_bac_mot.py   (mã thoát: 0, 0.0 s)
+

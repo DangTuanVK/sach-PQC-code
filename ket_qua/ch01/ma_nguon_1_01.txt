@@ -1,0 +1,3 @@
+# Mã nguồn 1.1: ch01/ma_nguon_1_01_phan_loai_khoa_cong_khai.py
+# Lệnh: python ma_nguon_1_01_phan_loai_khoa_cong_khai.py   (mã thoát: 0, 0.1 s)
+

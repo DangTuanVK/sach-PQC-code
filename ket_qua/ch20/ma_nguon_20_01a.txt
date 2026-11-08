@@ -1,0 +1,3 @@
+# Mã nguồn 20.1a: ch20/ma_nguon_20_01a_doan_ma_mo_dau.py
+# Lệnh: python ma_nguon_20_01a_doan_ma_mo_dau.py   (mã thoát: 0, 0.0 s)
+

@@ -1,0 +1,3 @@
+# Mã nguồn 10.1b: ch10/ma_nguon_10_01b_wots_theo_rfc_8391_ham_tiep.py
+# Lệnh: python ma_nguon_10_01b_wots_theo_rfc_8391_ham_tiep.py   (mã thoát: 0, 0.0 s)
+

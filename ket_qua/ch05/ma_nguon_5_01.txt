@@ -1,0 +1,3 @@
+# Mã nguồn 5.1: ch05/ma_nguon_5_01_thuat_toan_lll_co_so.py
+# Lệnh: python ma_nguon_5_01_thuat_toan_lll_co_so.py   (mã thoát: 0, 0.0 s)
+

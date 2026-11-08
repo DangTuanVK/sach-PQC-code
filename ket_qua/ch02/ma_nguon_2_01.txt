@@ -1,0 +1,3 @@
+# Mã nguồn 2.1: ch02/ma_nguon_2_01_phan_luong_tu_cua_mo.py
+# Lệnh: python ma_nguon_2_01_phan_luong_tu_cua_mo.py   (mã thoát: 0, 0.0 s)
+

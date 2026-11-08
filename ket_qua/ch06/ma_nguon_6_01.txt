@@ -1,0 +1,3 @@
+# Mã nguồn 6.1: ch06/ma_nguon_6_01_ntt_va_intt_chung_cho.py
+# Lệnh: python ma_nguon_6_01_ntt_va_intt_chung_cho.py   (mã thoát: 0, 0.0 s)
+

@@ -1,0 +1,3 @@
+# Mã nguồn 6.3: ch06/ma_nguon_6_03_phep_nhan_truc_tiep_trong.py
+# Lệnh: python ma_nguon_6_03_phep_nhan_truc_tiep_trong.py   (mã thoát: 0, 0.0 s)
+

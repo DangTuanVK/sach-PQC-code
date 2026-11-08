@@ -1,0 +1,3 @@
+# Mã nguồn 14.1: ch14/ma_nguon_14_01_thuat_toan_ky_cua_uov.py
+# Lệnh: python ma_nguon_14_01_thuat_toan_ky_cua_uov.py   (mã thoát: 0, 0.0 s)
+

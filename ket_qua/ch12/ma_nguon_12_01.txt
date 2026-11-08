@@ -1,0 +1,3 @@
+# Mã nguồn 12.1: ch12/ma_nguon_12_01_giai_ma_patterson_day_du.py
+# Lệnh: python ma_nguon_12_01_giai_ma_patterson_day_du.py   (mã thoát: 0, 0.0 s)
+

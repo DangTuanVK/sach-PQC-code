@@ -1,0 +1,6 @@
+# Mã nguồn 2.2: ch02/ma_nguon_2_02_vong_lap_chinh_cua_mo.py
+# Lệnh: python ma_nguon_2_02_vong_lap_chinh_cua_mo.py   (mã thoát: 0, 0.1 s)
+
+N= 15 -> 3 x 5    x=2, q=256  ( 8 qubit), c=192,  r=4
+N= 21 -> 7 x 3    x=2, q=512  ( 9 qubit), c=427,  r=6
+N= 35 -> 7 x 5    x=3, q=2048 (11 qubit), c=1877, r=12

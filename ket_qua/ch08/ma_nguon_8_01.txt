@@ -1,0 +1,3 @@
+# Mã nguồn 8.1: ch08/ma_nguon_8_01_vong_lap_ky_cua_ml.py
+# Lệnh: python ma_nguon_8_01_vong_lap_ky_cua_ml.py   (mã thoát: 0, 0.0 s)
+

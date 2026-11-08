@@ -1,0 +1,3 @@
+# Mã nguồn 3.1b: ch03/ma_nguon_3_01b_he_ma_hoa_thu_nho_tiep.py
+# Lệnh: python ma_nguon_3_01b_he_ma_hoa_thu_nho_tiep.py   (mã thoát: 0, 0.0 s)
+

@@ -1,0 +1,18 @@
+# Mã nguồn 19.1c: ch19/ma_nguon_19_01c_phan_loi_cua_cong_cu_tiep.py
+# Lệnh: python ma_nguon_19_01c_phan_loi_cua_cong_cu_tiep.py   (mã thoát: 0, 1.2 s)
+
+Tong so chung thu: 142
+=== Phan bo theo ho thuat toan ===
+RSA        4096     62    43.7%
+RSA        2048     46    32.4%
+ECC         384     31    21.8%
+ECC         256      3     2.1%
+=== Ngay het han (tinh tai 2026-11-08) ===
+  da het han            4 (  2.8%)
+  het han 2026-2030    30 ( 21.1%)
+  het han 2031-2035    22 ( 15.5%)
+  het han 2036-2040    44 ( 31.0%)
+  het han sau 2040     42 ( 29.6%)
+  con hieu luc SAU 2035: 86 (60.6%)
+
+# --- File tạo ra (đã chuyển vào ma_nguon_19_01c_tep/): cbom.json

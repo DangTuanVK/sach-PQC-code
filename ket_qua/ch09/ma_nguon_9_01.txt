@@ -1,0 +1,3 @@
+# Mã nguồn 9.1: ch09/ma_nguon_9_01_bo_lay_mau_gauss_roi.py
+# Lệnh: python ma_nguon_9_01_bo_lay_mau_gauss_roi.py   (mã thoát: 0, 0.0 s)
+

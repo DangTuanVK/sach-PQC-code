@@ -1,0 +1,3 @@
+# Mã nguồn 17.1b: ch17/ma_nguon_17_01b_mo_phong_tan_cong_cpa_tiep.py
+# Lệnh: python ma_nguon_17_01b_mo_phong_tan_cong_cpa_tiep.py   (mã thoát: 0, 0.0 s)
+
